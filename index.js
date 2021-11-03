@@ -46,8 +46,10 @@ Use the copy function below to do the following:
 */
 
 function copy(array) {
-  /*your code here*/
+  let copy = [...originalFlavors];
+  return copy;
 }
+console.log(copy);
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 Confirm that an array is exactly 31 flavors. Your function should accept:
@@ -59,10 +61,15 @@ Confirm that an array is exactly 31 flavors. Your function should accept:
 For Example: is31Flavors(originalFlavors) will return true if your code is working properly
 */
 
-function is31Flavors(/*your code here*/) {
+function is31Flavors(array) {
   /*your code here*/
-  //conditional if true return true else return false   it should be exactly 31
+  if (array.length === 31) {
+    return true;
+  } else {
+    return false;
+  }
 }
+console.log(is31Flavors);
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 Corporate has come to you with an idea for a new flavor: Rainbow Sherbert! They think this will be a game changer. You need to modify the array to include this flavor. 
@@ -78,9 +85,12 @@ Use the addFlavor function below to do the following:
 
 function addFlavor(array, string) {
   /*your code here*/
+  array.unshift("Rainbow Sherbert");
   // unshift to add new flavor to the beggining;
+  return array;
   //return the aray
 }
+console.log(addFlavor);
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Houston, we have a problem! There are now 32 flavors in the originalFlavors array! Your task is to remove an item from the end of the array. 
@@ -95,9 +105,12 @@ Use the removeLastFlavor function below to do the following:
 
 function removeLastFlavor(array) {
   /*your code here*/
+  array.pop();
   //using pop to remove the last item
+  return array;
   //return the array
 }
+console.log(removeLastFlavor);
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Write a function that returns a flavor at a given index in the array.
@@ -110,7 +123,7 @@ Use the getFlavorByIndex function below to do the following:
   For example: running getFlavorByIndex(originalFlavors, 2) would return "Black Walnut", assuming Rainbow Sherbert has been added successfully
 */
 //array and number in parameters
-function getFlavorByIndex(/*your code here*/) {
+function getFlavorByIndex() {
   /*your code here*/
   //array[0]
 }
@@ -130,12 +143,19 @@ Use the removeFlavorByName function below to do the following:
   HINT: You can use .splice() for this
 */
 // 2 parameters array and string we want tp remove
-function removeFlavorByName(/*your code here*/) {
+function removeFlavorByName(array, string) {
   /*your code here*/
-  //for loop to find the exact match; then remove it using splice
-  //splice  start and how much items to delete
-  //outside of loop return array
+  // for (let i = 0; i < array.length; i++) {
+  //   if (array[i] === string) {
+  //     string.splice(array[i], 1);
+  //   }
+  // }
+  // return array;
+  //for loop to find the exact match; then remove it using splice ===
+  //splice  start and how much items to delete  splice
+  //outside of loop return arr
 }
+// console.log(removeFlavorByName());
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 July 7th is "World Chocolate Day" and Baskin Robins wants to create promotional materials highlighting all of their chocolate flavors. 
