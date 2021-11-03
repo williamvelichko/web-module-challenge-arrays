@@ -46,10 +46,10 @@ Use the copy function below to do the following:
 */
 
 function copy(array) {
-  let copy = [...originalFlavors];
-  return copy;
+  let newArray = [...array];
+  return newArray;
 }
-console.log(copy);
+console.log(copy(originalFlavors));
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 Confirm that an array is exactly 31 flavors. Your function should accept:
@@ -123,9 +123,9 @@ Use the getFlavorByIndex function below to do the following:
   For example: running getFlavorByIndex(originalFlavors, 2) would return "Black Walnut", assuming Rainbow Sherbert has been added successfully
 */
 //array and number in parameters
-function getFlavorByIndex() {
+function getFlavorByIndex(array, number) {
   /*your code here*/
-  //array[0]
+  return array[2];
 }
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -145,17 +145,17 @@ Use the removeFlavorByName function below to do the following:
 // 2 parameters array and string we want tp remove
 function removeFlavorByName(array, string) {
   /*your code here*/
-  // for (let i = 0; i < array.length; i++) {
-  //   if (array[i] === string) {
-  //     string.splice(array[i], 1);
-  //   }
-  // }
-  // return array;
+  for (let i = 0; i < array.length; i++) {
+    if (array[i] === string) {
+      array.splice(i, 1);
+    }
+  }
+  return array;
   //for loop to find the exact match; then remove it using splice ===
   //splice  start and how much items to delete  splice
   //outside of loop return arr
 }
-// console.log(removeFlavorByName());
+console.log("task 6", removeFlavorByName(originalFlavors, "Rocky Road"));
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 July 7th is "World Chocolate Day" and Baskin Robins wants to create promotional materials highlighting all of their chocolate flavors. 
